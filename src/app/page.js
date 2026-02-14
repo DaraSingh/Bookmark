@@ -60,9 +60,9 @@ export default function Home() {
 
   if (!session) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-tr from-amber-100 via-green-300 to-amber-500">
         <Link href="/login">
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+          <button className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition text-5xl">
             Go to Login
           </button>
         </Link>
@@ -74,7 +74,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-10 py-4 bg-white shadow-md">
-        <h1 className="text-xl font-bold text-indigo-600">MyApp 🚀</h1>
+        <h1 className="text-xl font-bold text-indigo-600">Bookmark 🚀</h1>
 
         <div className="flex items-center gap-4">
           <button
