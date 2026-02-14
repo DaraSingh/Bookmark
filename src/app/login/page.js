@@ -1,7 +1,15 @@
 "use client";
 import React from 'react'
 import {signIn} from "next-auth/react"
+import { redirect } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 function page() {
+  const {data:session}=useSession();
+  if(session){
+    console.log(session.user.email)
+    redirect('/')
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600">
       <div className="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-md text-center">
